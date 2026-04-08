@@ -12,8 +12,8 @@
         <scene sceneID="XN3-g0-hT7">
             <objects>
                 <navigationController id="4ez-if-y6W" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tCf-8a-cit">
-                        <rect key="frame" x="0.0" y="118" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="tCf-8a-cit">
+                        <rect key="frame" x="0.0" y="118" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -37,7 +37,7 @@
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="IJI-B5-xqC">
-                                        <rect key="frame" x="20" y="55.333332061767578" width="353" height="43.666667938232422"/>
+                                        <rect key="frame" x="20" y="38" width="353" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IJI-B5-xqC" id="aqp-ON-Twj">
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="43.666667938232422"/>
@@ -61,13 +61,69 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Project Proposal" id="hCx-md-aeT"/>
+                    <connections>
+                        <segue destination="bpE-w8-Z2J" kind="show" id="PQb-6X-5NV"/>
+                        <segue destination="iDj-WO-Ou9" kind="show" id="CHG-wt-5JU"/>
+                        <segue destination="g32-g8-crA" kind="show" id="c7L-dw-ia7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-556.48854961832058" y="-23.239436619718312"/>
         </scene>
+        <!--Project Member View Controller-->
+        <scene sceneID="VU5-w9-hVV">
+            <objects>
+                <viewController title="Project Member View Controller" id="bpE-w8-Z2J" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2PC-r7-P50">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="9Jf-dJ-TG0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5k7-Fe-ACe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZUB-6b-vdc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575" y="-35"/>
+        </scene>
+        <!--Project Image View Controller-->
+        <scene sceneID="UPX-L7-PEj">
+            <objects>
+                <viewController title="Project Image View Controller" id="g32-g8-crA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5lU-hW-Utl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YFp-Xw-wLE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oh6-GF-lKV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MNo-9v-byD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-488" y="732"/>
+        </scene>
+        <!--Project Element View Controller-->
+        <scene sceneID="3y6-J1-xPH">
+            <objects>
+                <viewController title="Project Element View Controller" id="iDj-WO-Ou9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Onl-Vt-Cck">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="UFp-ck-MHh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aMR-oV-tRL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DGP-Dx-2TA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="469" y="708"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemCyanColor">
             <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
