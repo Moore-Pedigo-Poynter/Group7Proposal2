@@ -57,6 +57,8 @@ extension ViewController : UITableViewDelegate {
             }
         case 2:
             print("Preview");
+            segueIdentifier = "Preview"
+            performSegue(withIdentifier: "PreviewSegue", sender: self)
             // Preview selected
         default:
             break
@@ -90,20 +92,24 @@ extension ViewController : UITableViewDelegate {
                 destinationVC.navigationItem.title = "Password Generator"
                 destinationVC.recievedImage = UIImage(named: "password")!
                 destinationVC.recievedTitle = "Frontend"
-                destinationVC.recievedNotes = "Frontend Notes"
+                destinationVC.recievedNotes = "The frontend of the password generator will notify different elements of the UI when the user inputs an invalid length or similar errors. The password generator will also handle nil types and be able to send needed information between View Controllers. A navigation controller will be implemented to allow the user to go back and forth between screens."
                 
             }else if segueIdentifier == "Backend" {
                 destinationVC.navigationItem.title = "Password Generator"
                 destinationVC.recievedImage = UIImage(named: "password")!
                 destinationVC.recievedTitle = "Backend"
-                destinationVC.recievedNotes = "Backend Notes"
+                destinationVC.recievedNotes = "The project backend will generate a random password based on the user's preferences, which will be simplified via method calls, classes and stored properties."
                 
             }else if segueIdentifier == "UIDesign" {
                 destinationVC.navigationItem.title = "Password Generator"
                 destinationVC.recievedImage = UIImage(named: "password")!
                 destinationVC.recievedTitle = "UI Design"
-                destinationVC.recievedNotes = "UI Design Notes"
+                destinationVC.recievedNotes = "UI Design will allow the user to enter password length via a text field, enable or disable special characters, and generate and send a password across segues via a pressable button. Passwords saved will also be viewable via a table view. The project will be able to fit different device aspect ratios."
                 
+            }
+        }else if let destinationVC = segue.destination as? PreviewViewController {
+            if segueIdentifier == "Preview" {
+                destinationVC.navigationItem.title = "Project UI Image"
             }
         }
         
