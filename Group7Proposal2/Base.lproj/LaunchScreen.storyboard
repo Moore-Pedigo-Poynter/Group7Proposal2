@@ -16,19 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Startup" translatesAutoresizingMaskIntoConstraints="NO" id="Xeq-Np-80k">
-                                <rect key="frame" x="70" y="268" width="250" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="CrW-4N-5Fb"/>
-                                    <constraint firstAttribute="width" constant="250" id="XGg-EN-3uA"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Startup" translatesAutoresizingMaskIntoConstraints="NO" id="Fdf-tA-c58">
+                                <rect key="frame" x="70" y="318" width="253" height="266"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Xeq-Np-80k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="KHg-Pp-uTD"/>
-                            <constraint firstItem="Xeq-Np-80k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="Tyh-3e-7gr"/>
+                            <constraint firstItem="Fdf-tA-c58" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="Ntf-04-NpX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fdf-tA-c58" secondAttribute="trailing" constant="70" id="YK9-eH-up1"/>
+                            <constraint firstItem="Fdf-tA-c58" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="d7h-aN-Qyk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fdf-tA-c58" secondAttribute="bottom" constant="200" id="ed6-qa-4vh"/>
                         </constraints>
                     </view>
                 </viewController>
