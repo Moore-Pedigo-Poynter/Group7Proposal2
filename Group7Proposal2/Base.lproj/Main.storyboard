@@ -151,14 +151,59 @@
         <!--Project Element View Controller-->
         <scene sceneID="3y6-J1-xPH">
             <objects>
-                <viewController title="Project Element View Controller" id="iDj-WO-Ou9" sceneMemberID="viewController">
+                <viewController title="Project Element View Controller" id="iDj-WO-Ou9" customClass="ProjectViewController" customModule="Group7Proposal2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Onl-Vt-Cck">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="26B-5F-rag">
+                                <rect key="frame" x="0.0" y="234" width="393" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="j66-en-xmQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOi-Fn-dW1">
+                                <rect key="frame" x="29.999999999999986" y="429" width="253.66666666666663" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Section" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqH-TQ-fjD">
+                                <rect key="frame" x="30" y="497" width="133" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project Description" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVA-eA-EY9">
+                                <rect key="frame" x="30" y="546" width="333" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="UFp-ck-MHh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UFp-ck-MHh" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VOi-Fn-dW1" secondAttribute="trailing" symbolic="YES" id="3bX-Ge-GFd"/>
+                            <constraint firstItem="fqH-TQ-fjD" firstAttribute="leading" secondItem="UFp-ck-MHh" secondAttribute="leading" constant="30" id="D41-q9-LeM"/>
+                            <constraint firstItem="fVA-eA-EY9" firstAttribute="top" secondItem="fqH-TQ-fjD" secondAttribute="bottom" constant="25" id="KCa-5a-mi1"/>
+                            <constraint firstItem="UFp-ck-MHh" firstAttribute="trailing" secondItem="26B-5F-rag" secondAttribute="trailing" id="Kh1-QX-WlX"/>
+                            <constraint firstItem="fqH-TQ-fjD" firstAttribute="top" secondItem="VOi-Fn-dW1" secondAttribute="bottom" constant="20" id="QuQ-28-Km3"/>
+                            <constraint firstItem="26B-5F-rag" firstAttribute="leading" secondItem="UFp-ck-MHh" secondAttribute="leading" id="TNY-xc-RUA"/>
+                            <constraint firstItem="VOi-Fn-dW1" firstAttribute="leading" secondItem="UFp-ck-MHh" secondAttribute="leading" constant="30" id="Yma-nI-ZRV"/>
+                            <constraint firstItem="VOi-Fn-dW1" firstAttribute="top" secondItem="26B-5F-rag" secondAttribute="bottom" constant="20" id="bu9-Rq-rEk"/>
+                            <constraint firstItem="UFp-ck-MHh" firstAttribute="trailing" secondItem="fVA-eA-EY9" secondAttribute="trailing" constant="30" id="m2t-vT-bZw"/>
+                            <constraint firstItem="26B-5F-rag" firstAttribute="top" secondItem="UFp-ck-MHh" secondAttribute="top" constant="20" id="nYl-nc-N99"/>
+                            <constraint firstItem="UFp-ck-MHh" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fqH-TQ-fjD" secondAttribute="trailing" symbolic="YES" id="w0l-xW-7Nf"/>
+                            <constraint firstItem="fVA-eA-EY9" firstAttribute="leading" secondItem="UFp-ck-MHh" secondAttribute="leading" constant="30" id="y0m-eW-ZsU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aMR-oV-tRL"/>
+                    <connections>
+                        <outlet property="projectDescriptionLabel" destination="fVA-eA-EY9" id="5ig-PG-juF"/>
+                        <outlet property="projectImageView" destination="26B-5F-rag" id="a3K-lP-Dyz"/>
+                        <outlet property="projectTitleLabel" destination="fqH-TQ-fjD" id="09g-Wn-2gd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DGP-Dx-2TA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

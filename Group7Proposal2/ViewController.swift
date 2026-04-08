@@ -42,10 +42,16 @@ extension ViewController : UITableViewDelegate {
             switch indexPath.row {
             case 0:
                 print("Frontend")
+                segueIdentifier = "Frontend"
+                performSegue(withIdentifier: "ProjectSegue", sender: self)
             case 1:
                 print("Backend")
+                segueIdentifier = "Backend"
+                performSegue(withIdentifier: "ProjectSegue", sender: self)
             case 2:
                 print("UI Design")
+                segueIdentifier = "UIDesign"
+                performSegue(withIdentifier: "ProjectSegue", sender: self)
             default:
                 break
             }
@@ -79,6 +85,26 @@ extension ViewController : UITableViewDelegate {
                 destinationVC.recievedNotes = "Project Designer and quality assurance. Responsible for maintaining the project goals meet the expected criteria and assisting where support is needed."
             }
             
+        }else if let destinationVC = segue.destination as? ProjectViewController {
+            if segueIdentifier == "Frontend" {
+                destinationVC.navigationItem.title = "Password Generator"
+                destinationVC.recievedImage = UIImage(named: "password")!
+                destinationVC.recievedTitle = "Frontend"
+                destinationVC.recievedNotes = "Frontend Notes"
+                
+            }else if segueIdentifier == "Backend" {
+                destinationVC.navigationItem.title = "Password Generator"
+                destinationVC.recievedImage = UIImage(named: "password")!
+                destinationVC.recievedTitle = "Backend"
+                destinationVC.recievedNotes = "Backend Notes"
+                
+            }else if segueIdentifier == "UIDesign" {
+                destinationVC.navigationItem.title = "Password Generator"
+                destinationVC.recievedImage = UIImage(named: "password")!
+                destinationVC.recievedTitle = "UI Design"
+                destinationVC.recievedNotes = "UI Design Notes"
+                
+            }
         }
         
 
