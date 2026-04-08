@@ -62,9 +62,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Project Proposal" id="hCx-md-aeT"/>
                     <connections>
-                        <segue destination="bpE-w8-Z2J" kind="show" id="PQb-6X-5NV"/>
-                        <segue destination="iDj-WO-Ou9" kind="show" id="CHG-wt-5JU"/>
-                        <segue destination="g32-g8-crA" kind="show" id="c7L-dw-ia7"/>
+                        <segue destination="bpE-w8-Z2J" kind="show" identifier="MemberSegue" id="PQb-6X-5NV"/>
+                        <segue destination="iDj-WO-Ou9" kind="show" identifier="ProjectSegue" id="CHG-wt-5JU"/>
+                        <segue destination="g32-g8-crA" kind="show" identifier="PreviewSegue" id="c7L-dw-ia7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -74,7 +74,7 @@
         <!--Project Member View Controller-->
         <scene sceneID="VU5-w9-hVV">
             <objects>
-                <viewController title="Project Member View Controller" id="bpE-w8-Z2J" sceneMemberID="viewController">
+                <viewController title="Project Member View Controller" id="bpE-w8-Z2J" customClass="MemberViewController" customModule="Group7Proposal2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2PC-r7-P50">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

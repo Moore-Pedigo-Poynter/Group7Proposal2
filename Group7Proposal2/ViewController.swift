@@ -16,16 +16,58 @@ class ViewController: UIViewController {
     }
 }
 
+var segueIdentifier = "0"
+
 extension ViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
+        case 0:
+            switch indexPath.row {
+            case 0:
+                //print("Lucas Pedigo")
+                segueIdentifier = "LucasPedigo"
+                performSegue(withIdentifier: "MemberSegue", sender: self)
+            case 1:
+                //print("Jackson Poynter")
+                performSegue(withIdentifier: "JacksonPoynter", sender: self)
+            case 2:
+                //print("Xander J. Moore")
+                performSegue(withIdentifier: "XanderMoore", sender: self)
+            default:
+                break;
+            }
+        case 1:
+            switch indexPath.row {
+            case 0:
+                print("Frontend")
+            case 1:
+                print("Backend")
+            case 2:
+                print("UI Design")
+            default:
+                break
+            }
         case 2:
-            print("Temp");
+            print("Preview");
             // Preview selected
         default:
             break
         }
     }
+    
+    override func prepare (for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? MemberViewController {
+            if segueIdentifier == "LucasPedigo" {
+                destinationVC.navigationItem.title = "Lucas Pedigo"
+            }
+        }
+        
+    //    if segue.identifier == "LucasPedigo" {
+    //        let destinationVC = segue.destination as? MemberViewController
+    //        destinationVC?.navigationItem.title = "Lucas Pedigo"
+    //    }
+    }
+    
 }
 
 extension ViewController: UITableViewDataSource {

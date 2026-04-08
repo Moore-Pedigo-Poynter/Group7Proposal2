@@ -5,4 +5,16 @@
 //  Created by Pedigo, Charles L. on 4/7/26.
 //
 
-import Foundation
+import UIKit
+
+class MemberViewController: UIViewController {
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
+    
+}
+
