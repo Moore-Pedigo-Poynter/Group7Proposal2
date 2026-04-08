@@ -24,15 +24,17 @@ extension ViewController : UITableViewDelegate {
         case 0:
             switch indexPath.row {
             case 0:
-                //print("Lucas Pedigo")
+                print("Lucas Pedigo")
                 segueIdentifier = "LucasPedigo"
                 performSegue(withIdentifier: "MemberSegue", sender: self)
             case 1:
-                //print("Jackson Poynter")
-                performSegue(withIdentifier: "JacksonPoynter", sender: self)
+                print("Jackson Poynter")
+                segueIdentifier = "JacksonPoynter"
+                performSegue(withIdentifier: "MemberSegue", sender: self)
             case 2:
-                //print("Xander J. Moore")
-                performSegue(withIdentifier: "XanderMoore", sender: self)
+                print("Xander J. Moore")
+                segueIdentifier = "XanderMoore"
+                performSegue(withIdentifier: "MemberSegue", sender: self)
             default:
                 break;
             }
@@ -56,16 +58,25 @@ extension ViewController : UITableViewDelegate {
     }
     
     override func prepare (for segue: UIStoryboardSegue, sender: Any?) {
+        //Member cell segues
         if let destinationVC = segue.destination as? MemberViewController {
             if segueIdentifier == "LucasPedigo" {
+                guard let navigationController = segue.destination as? UINavigationController else { return }
                 destinationVC.navigationItem.title = "Lucas Pedigo"
+                destinationVC.memberImageView.image = UIImage(named: "group")
+                destinationVC.memberNameLabel.text = "Lucas Pedigo"
+                destinationVC.memberNotesLabel.text = "Head lead for UI design, segues, and programming assistance. Responsible for maintaining the app's design and ensuring that all features are functional and user-friendly. Also keeps the timeline of the project on track and ensures that all tasks are completed before the deadline."
+            }else if segueIdentifier == "JacksonPoynter" {
+                destinationVC.navigationItem.title = "Jackson Poynter"
+                
+            }else if segueIdentifier == "XanderMoore" {
+                destinationVC.navigationItem.title = "Xander Moore"
             }
+            
         }
         
-    //    if segue.identifier == "LucasPedigo" {
-    //        let destinationVC = segue.destination as? MemberViewController
-    //        destinationVC?.navigationItem.title = "Lucas Pedigo"
-    //    }
+
+        
     }
     
 }

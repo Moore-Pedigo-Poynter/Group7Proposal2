@@ -78,14 +78,59 @@
                     <view key="view" contentMode="scaleToFill" id="2PC-r7-P50">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Ty-Lv-A6c">
+                                <rect key="frame" x="0.0" y="234" width="393" height="175"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="Y1U-s2-cfN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LH7-Lo-lLe">
+                                <rect key="frame" x="30" y="429" width="148" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujV-nh-7f8">
+                                <rect key="frame" x="30" y="497" width="177" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add notes for this member" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CkL-Gi-yeT">
+                                <rect key="frame" x="30" y="541" width="333" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="9Jf-dJ-TG0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Ty-Lv-A6c" firstAttribute="leading" secondItem="9Jf-dJ-TG0" secondAttribute="leading" id="1gT-cH-Tbv"/>
+                            <constraint firstItem="9Jf-dJ-TG0" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LH7-Lo-lLe" secondAttribute="trailing" symbolic="YES" id="6rJ-Vr-o1V"/>
+                            <constraint firstItem="CkL-Gi-yeT" firstAttribute="top" secondItem="ujV-nh-7f8" secondAttribute="bottom" constant="20" id="ABD-j1-L3J"/>
+                            <constraint firstItem="9Jf-dJ-TG0" firstAttribute="trailing" secondItem="CkL-Gi-yeT" secondAttribute="trailing" constant="30" id="HJ9-cX-Fml"/>
+                            <constraint firstItem="7Ty-Lv-A6c" firstAttribute="top" secondItem="9Jf-dJ-TG0" secondAttribute="top" constant="20" id="TFD-mF-aA5"/>
+                            <constraint firstItem="LH7-Lo-lLe" firstAttribute="top" secondItem="7Ty-Lv-A6c" secondAttribute="bottom" constant="20" id="kzj-eE-feN"/>
+                            <constraint firstItem="9Jf-dJ-TG0" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ujV-nh-7f8" secondAttribute="trailing" symbolic="YES" id="owH-EH-D0x"/>
+                            <constraint firstItem="CkL-Gi-yeT" firstAttribute="leading" secondItem="9Jf-dJ-TG0" secondAttribute="leading" constant="30" id="pT2-L0-ctO"/>
+                            <constraint firstItem="LH7-Lo-lLe" firstAttribute="leading" secondItem="9Jf-dJ-TG0" secondAttribute="leading" constant="30" id="pvH-kW-25x"/>
+                            <constraint firstItem="9Jf-dJ-TG0" firstAttribute="trailing" secondItem="7Ty-Lv-A6c" secondAttribute="trailing" id="taf-0s-PHo"/>
+                            <constraint firstItem="ujV-nh-7f8" firstAttribute="leading" secondItem="9Jf-dJ-TG0" secondAttribute="leading" constant="30" id="vLh-If-P2k"/>
+                            <constraint firstItem="ujV-nh-7f8" firstAttribute="top" secondItem="LH7-Lo-lLe" secondAttribute="bottom" constant="20" id="yo8-P8-9oi"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5k7-Fe-ACe"/>
+                    <connections>
+                        <outlet property="memberImageView" destination="7Ty-Lv-A6c" id="i9Z-GT-rDc"/>
+                        <outlet property="memberNameLabel" destination="ujV-nh-7f8" id="62j-H5-u8Q"/>
+                        <outlet property="memberNotesLabel" destination="CkL-Gi-yeT" id="wQg-Ka-BfC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZUB-6b-vdc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="575" y="-35"/>
+            <point key="canvasLocation" x="574.80916030534354" y="-35.211267605633807"/>
         </scene>
         <!--Project Image View Controller-->
         <scene sceneID="UPX-L7-PEj">
