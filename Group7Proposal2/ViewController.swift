@@ -61,16 +61,22 @@ extension ViewController : UITableViewDelegate {
         //Member cell segues
         if let destinationVC = segue.destination as? MemberViewController {
             if segueIdentifier == "LucasPedigo" {
-                guard let navigationController = segue.destination as? UINavigationController else { return }
                 destinationVC.navigationItem.title = "Lucas Pedigo"
-                destinationVC.memberImageView.image = UIImage(named: "group")
-                destinationVC.memberNameLabel.text = "Lucas Pedigo"
-                destinationVC.memberNotesLabel.text = "Head lead for UI design, segues, and programming assistance. Responsible for maintaining the app's design and ensuring that all features are functional and user-friendly. Also keeps the timeline of the project on track and ensures that all tasks are completed before the deadline."
+                destinationVC.recievedImage = UIImage(named: "group")!
+                destinationVC.recievedName = "Lucas Pedigo"
+                destinationVC.recievedNotes = "Head lead for UI design, segues, and programming assistance. Responsible for maintaining the app's design and ensuring that all features are functional and user-friendly. Also keeps the timeline of the project on track and ensures that all tasks are completed before the deadline."
+
             }else if segueIdentifier == "JacksonPoynter" {
                 destinationVC.navigationItem.title = "Jackson Poynter"
+                destinationVC.recievedImage = UIImage(named: "group")!
+                destinationVC.recievedName = "Jackson Poynter"
+                destinationVC.recievedNotes = "Programmer and backend developer. Responsible for maintaining the app's functionality and ensuring that all data is stored and retrieved securely. Also works closely with the UI team to ensure that the backend and frontend are working together seamlessly."
                 
             }else if segueIdentifier == "XanderMoore" {
                 destinationVC.navigationItem.title = "Xander Moore"
+                destinationVC.recievedImage = UIImage(named: "group")!
+                destinationVC.recievedName = "Xander Moore"
+                destinationVC.recievedNotes = "Project Designer and quality assurance. Responsible for maintaining the project goals meet the expected criteria and assisting where support is needed."
             }
             
         }
